@@ -1,0 +1,7 @@
+Model,Wavelength,Optical Output Power,Threshold Current,Operating Current,Operating Voltage,Beam Divergence (Parallel / Perpendicular),Package
+Sharp GH04C01C2G,450nm,1000mW,100mA,680mA,4.3V,10° / 45°,Φ5.6mm
+Nichia NDB7775-07,440nm - 455nm,1.6W,80mA - 220mA,1.7A (Max),3.7V - 5.5V,14° / 44°,-
+Nichia NDB7875,435nm - 455nm,1.6W,80mA - 220mA,1.7A (Max),3.7V - 5.5V,14° / 44°,φ9.0mm
+Sony SLD3232VF,405nm,50mW,55mA,55mA,5.3V,9° / 19°,Φ5.6mm
+Sharp GH0637AA2G,638nm,700mW,110mA,810mA,2.46V,16° / 35°,Φ5.6mm
+Sharp GH06P25A2C,660nm,100mW,55mA,135mA,2.5V,7-13° / 12-19°,Φ5.6mm
