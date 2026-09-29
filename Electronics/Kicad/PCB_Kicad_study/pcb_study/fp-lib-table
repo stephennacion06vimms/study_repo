@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "digikey_footprint") (type "KiCad") (uri "C:/Users/steph/dev/study_repo/Electronics/Kicad/PCB_Kicad_study/Footprint_library/digikey_footprint.pretty") (options "") (descr ""))
+)

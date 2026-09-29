@@ -1,0 +1,185 @@
+(footprint "Buzzer_D30mm_H20mm_P15mm_688-1652-ND_AI-3035-TT-12V-R"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "BZ**"
+		(at -4.5 -5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4676e9b3-f597-4a9b-a4bc-e75b3dcb9635")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Buzzer_D30mm_H20mm_P15mm_688-1652-ND_AI-3035-TT-12V-R"
+		(at 3.15 8.15 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c3a25b11-4792-4008-8c16-06ed493f3655")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e9cc1593-fe8b-42a1-af6c-f901aa267bac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b91dbc09-f522-47e8-a1b7-9be0c4eb35d3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 7.5 0)
+		(end 22.5 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "3a0c4f92-853d-44cc-aae9-b0ad690a360e")
+	)
+	(fp_circle
+		(center 7.5 0)
+		(end 23 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e132ece6-a0ec-45fb-a907-136d85760116")
+	)
+	(fp_circle
+		(center 7.5 0)
+		(end 22.5 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "80dbed81-50f4-4ec7-8138-6d8f1bba6552")
+	)
+	(fp_text user "-"
+		(at 12.95 4.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "473aa8f2-af39-44be-9070-71a8716cf5fc")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "+"
+		(at 2.1 4.3 0)
+		(unlocked yes)
+		(layer "B.SilkS")
+		(uuid "fd72224d-f3d6-4ec6-90f6-ad8e1ad3637a")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(fp_text user "+"
+		(at 2.15 4.3 0)
+		(unlocked yes)
+		(layer "B.SilkS")
+		(uuid "c386d742-8dd8-4c5f-8a64-9f248bcb653e")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(fp_text user "-"
+		(at 16.7 4.7 0)
+		(unlocked yes)
+		(layer "B.SilkS")
+		(uuid "1db5b261-2dd9-4112-8aef-0fb7c9c2edae")
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 8.85 11.35 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1515661e-e2eb-40e6-89e5-f65968c1d028")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "0d0259dc-f3e5-40c9-ad50-6e700b368538")
+	)
+	(pad "2" thru_hole roundrect
+		(at 15 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "5dfa5e14-2941-4f06-91ba-d929b92c079c")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/steph/dev/study_repo/Electronics/Kicad/PCB_Kicad_study/3d Files/AI-3035-TT-12V-R.STEP"
+		(offset
+			(xyz 7.5 0 10)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
