@@ -1,5 +1,10 @@
 # INA226 & MCU Connection Diagram (Maximizing Features)
 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-17 | Stephen Nacion | INA226 current sensor study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
 To fully utilize all the features of the INA226—specifically to avoid polling the I2C bus and to use hardware interrupts for **Conversion Ready** or **Over-Limit** alarms—you must connect the `Alert` pin to a GPIO interrupt pin on your microcontroller.
 
 Below is a schematic diagram showing the complete wiring for high-side current sensing with hardware interrupt support.

@@ -1,5 +1,10 @@
 # Beam Divergence
 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-18 | Stephen Nacion | Laser study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
 Imagine a beam of light as a stream of water coming out of a hose. **Beam divergence is simply how much that beam spreads out as it travels away from its source.**
 
 The word "diverge" just means to spread apart or separate.
@@ -8,6 +13,8 @@ The word "diverge" just means to spread apart or separate.
 
 *   **High Divergence (Spreads out quickly):** Think of a regular **flashlight**. When you shine it at a wall close to you, the circle of light is small. But if you shine it at a wall across the yard, the circle becomes huge and much dimmer. The beam is spreading out a lot.
 *   **Low Divergence (Stays tight):** Think of a **laser pointer**. You can point it at a wall across the room, and the little red dot stays almost exactly the same size as when it left the pointer. The beam spreads out very slowly.
+
+![Beam divergence: a laser pointer stays tight while a flashlight spreads](images/divergence-visualization.jpg)
 
 ## Why does it matter?
 
@@ -26,6 +33,8 @@ Because of the physics of light (a property called diffraction), the beam spread
 *   **Perpendicular Divergence (Fast Axis):** This is the spread of the beam *perpendicular* to that flat layer. Counter-intuitively, because the exit window is thinnest in this direction, the light spreads out very quickly, resulting in a **much larger angle**.
 
 Because the beam spreads fast in one direction and slow in the other, it creates an **oval or elliptical shape** when shone on a surface, rather than a perfect circle.
+
+![Parallel (slow axis) vs perpendicular (fast axis) divergence give an elliptical spot](images/parallel-vs-perpendicular-divergence.jpg)
 
 ### Understanding Your Parameters
 

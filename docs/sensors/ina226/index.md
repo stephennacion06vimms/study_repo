@@ -1,5 +1,12 @@
 # INA226 Sensor Summary
 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-17 | Stephen Nacion | INA226 current sensor study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
+Source: TI INA226 datasheet, [ina226.pdf](datasheets/ina226.pdf).
+
 ## Overview
 The INA226 is a 36V, 16-Bit, ultra-precise I2C/SMBus-compatible current, voltage, and power monitor with an alert pin. It can measure both the voltage drop across a shunt resistor (shunt voltage) and the bus supply voltage. It uses a programmable calibration value, conversion times, and averaging, along with an internal multiplier, to provide direct readouts of current (Amperes) and power (Watts).
 

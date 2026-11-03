@@ -1,6 +1,11 @@
 # Laser Diodes Summary
 
-This document explains the crucial parameters found in the datasheets of the laser diodes within this folder. 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-18 | Stephen Nacion | Laser study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
+This document explains the crucial parameters found in the datasheets of the laser diodes listed on the [Lasers](index.md#datasheets) page. The same data is in [laser-diodes-summary.csv](laser-diodes-summary.csv).
 
 ## Understanding Crucial Laser Diode Parameters
 

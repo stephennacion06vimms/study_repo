@@ -1,5 +1,10 @@
 # Understanding I2C Timing vs. INA226 Conversion Timing
 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-17 | Stephen Nacion | INA226 current sensor study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
 To fully understand the system's timing, we need to separate it into two distinct parts: **Internal Sensor Timing** (the INA226 doing its job) and **Communication Timing** (the ESP32 talking to the INA226 via I2C).
 
 ## 1. INA226 Internal Timing (Conversion & Averaging)

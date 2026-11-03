@@ -1,0 +1,31 @@
+@startuml system-overview
+!include ../../_plantuml/study-style.puml
+title Phono 360 - what runs where (study map)
+
+left to right direction
+
+rectangle "Mic board: MEMS Interface v02" as MIC {
+  component "4 x sensiBel SBM100B\noptical MEMS mics\nN / S / W / E, r = 61 mm" as MICS
+  component "I2C2 sensors\nHDC2021 (T/RH)\nMMC5603NJ (mag)\nLSM6DSR (IMU)" as SENS
+  component "STM32U575 (Zephyr)\n**SAI + GPDMA** capture\n**audio_dsp**: A/C/Z, Fast/Slow, Leq\n**fft_engine**: FFT, 1/3-oct, CSD\n**doa_***: SRP-PHAT, quality, cal\n**env_service**: orientation, tamper\nNVS settings, MCUboot" as STM
+  MICS --> STM : I2S (SAI1_A + SAI1_B)\n48 kHz, 32-bit
+  SENS --> STM : I2C
+}
+
+rectangle "LTE Node v04" as LTE {
+  component "nRF9161 (NCS)\n**stm32uartmgr**: framing, link ACK\n**vimms_phono**: frames -> VimmsSound2\n**vimms_pudding_cmd**: cloud commands\nSTM32 FOTA, UTC time relay" as NRF
+}
+
+cloud "MQTT broker\n(TLS)" as BROKER
+rectangle "Cloud backend\n+ Kalibrator (browser)" as APPS
+
+STM <--> NRF : **phonocom**\nUART 1 Mbaud\n0xAA 0x55 frames
+NRF <--> BROKER : LTE-M\nProtobuf over MQTT
+BROKER <--> APPS : telemetry,\ncommands
+
+legend right
+  Source: Phono360/fw/README.md @ d49d732,
+  vimms-engineering docs/phono-360 (lte-node-firmware.md, hardware.md).
+  Simplified for study; see the VIMMS Engineering Docs for the full diagrams.
+endlegend
+@enduml

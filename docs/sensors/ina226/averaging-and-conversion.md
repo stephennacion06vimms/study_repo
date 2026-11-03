@@ -1,5 +1,10 @@
 # Understanding Averaging and Conversion Time in the INA226
 
+| Rev | Date | Author | Description |
+|---|---|---|---|
+| 0.1 | 2026-09-17 | Stephen Nacion | INA226 current sensor study notes |
+| 0.2 | 2026-11-03 | Claude Code (agent) for VIMMS AS | Moved into the docs site; revision table, links and figures added |
+
 When using the INA226, understanding how to configure the **Conversion Time** and **Averaging Mode** is critical for balancing measurement accuracy (noise reduction) against system responsiveness (how quickly you get new data).
 
 ## 1. What is Conversion Time?

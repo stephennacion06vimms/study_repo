@@ -1,0 +1,89 @@
+# Study notes site. Same toolchain and look as vimms-engineering. Local only.
+# Quick:  .\scripts\docs.cmd  (sets up venv, serves on :8001, opens browser)
+# Build:  tools\docs\.venv\Scripts\mkdocs build --strict
+# Serve:  tools\docs\.venv\Scripts\mkdocs serve -a 127.0.0.1:8001
+# PlantUML diagrams are rendered to SVG locally by tools/docs/hooks.py.
+site_name: Stephen's Study Notes
+site_description: Personal engineering study notes (electronics, firmware, sensors, VIMMS products)
+docs_dir: docs
+site_dir: site
+# Plain .html links so the built site also works when opened from disk.
+use_directory_urls: false
+
+hooks:
+  - tools/docs/hooks.py
+
+exclude_docs: |
+  _plantuml/
+  *.puml
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+plugins:
+  - search
+  - glightbox:
+      zoomable: true
+      draggable: true
+      skip_classes: [no-zoom]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      # The INA226 notes use Mermaid diagrams; Material renders them in the browser.
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Phono 360:
+      - Study roadmap: phono-360/roadmap.md
+  - Electronics:
+      - electronics/index.md
+  - Firmware:
+      - firmware/index.md
+  - Sensors:
+      - INA226 current sensor:
+          - sensors/ina226/index.md
+          - Averaging and conversion time: sensors/ina226/averaging-and-conversion.md
+          - MCU connection: sensors/ina226/mcu-connection.md
+          - I2C vs conversion timing: sensors/ina226/i2c-vs-conversion-timing.md
+  - Lasers:
+      - lasers/index.md
+      - Beam divergence: lasers/beam-divergence.md
+      - Laser diode datasheets: lasers/laser-diodes-summary.md
+  - About these notes:
+      - Writing notes and diagrams: writing-docs.md

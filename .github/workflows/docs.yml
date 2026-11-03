@@ -1,0 +1,37 @@
+name: docs
+
+# Build-only check: renders PlantUML locally and runs mkdocs --strict.
+# Nothing is published.
+on:
+  pull_request:
+    paths: ["docs/**", "mkdocs.yml", "tools/docs/**", ".github/workflows/docs.yml"]
+  push:
+    branches: [main]
+    paths: ["docs/**", "mkdocs.yml", "tools/docs/**", ".github/workflows/docs.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: tools/docs/requirements.txt
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Cache PlantUML jar
+        uses: actions/cache@v4
+        with:
+          path: tools/docs/.cache
+          key: plantuml-${{ hashFiles('tools/docs/hooks.py') }}
+      - name: Install docs toolchain
+        run: python -m pip install -r tools/docs/requirements.txt
+      - name: Build site (strict)
+        run: mkdocs build --strict

@@ -1,0 +1,63 @@
+' Shared look for all study diagrams (copied from vimms-engineering). Include with:
+'   !include ../../_plantuml/study-style.puml
+' Smetana is PlantUML's built-in layout engine, so Graphviz is not needed.
+!pragma layout smetana
+
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam roundCorner 8
+skinparam defaultFontName "Segoe UI, Helvetica, Arial, sans-serif"
+skinparam defaultFontSize 13
+skinparam ArrowColor #44546A
+skinparam ArrowFontSize 11
+skinparam TitleFontSize 16
+skinparam TitleFontStyle bold
+skinparam NoteBackgroundColor #FFF8DC
+skinparam NoteBorderColor #C9B458
+skinparam LegendBackgroundColor #F5F7FA
+skinparam LegendBorderColor #B8C2CC
+skinparam LegendFontSize 11
+
+skinparam component {
+  BackgroundColor #EAF2FB
+  BorderColor #2F6DB5
+}
+skinparam rectangle {
+  BackgroundColor #F5F7FA
+  BorderColor #6B7B8C
+}
+skinparam node {
+  BackgroundColor #EEF6EE
+  BorderColor #3C8D40
+}
+skinparam database {
+  BackgroundColor #FDF1E6
+  BorderColor #C46A1B
+}
+skinparam cloud {
+  BackgroundColor #F3EEFA
+  BorderColor #6E4BA8
+}
+skinparam package {
+  BackgroundColor #FBFCFD
+  BorderColor #8A99A8
+}
+skinparam state {
+  BackgroundColor #EAF2FB
+  BorderColor #2F6DB5
+}
+skinparam activity {
+  BackgroundColor #EAF2FB
+  BorderColor #2F6DB5
+  DiamondBackgroundColor #FFF8DC
+  DiamondBorderColor #C9B458
+}
+skinparam sequence {
+  ParticipantBackgroundColor #EAF2FB
+  ParticipantBorderColor #2F6DB5
+  LifeLineBorderColor #8A99A8
+  GroupBackgroundColor #F5F7FA
+}
+
+' Colour tags used in diagrams
+!define TBD_COLOR #FCE4E4

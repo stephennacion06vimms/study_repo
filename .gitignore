@@ -1,0 +1,7 @@
+
+# Docs site: built output, toolchain, PlantUML jar and generated diagram SVGs
+site/
+tools/docs/.venv/
+tools/docs/.cache/
+docs/**/diagrams/*.svg
+__pycache__/
